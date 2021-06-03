@@ -1,0 +1,24 @@
+{% extends 'base_general.html.twig' %}
+
+{% block stylesheet_general %}
+    {% block stylesheet %}
+
+    {% endblock %}
+{% endblock %}
+
+{% block body_general %}
+<body id="page-top" style="margin-top: 150px">
+    {% include 'header.html.twig' %}
+    <div class="container d-flex align-items-center flex-column">
+        {% block body %}
+        {% endblock %}
+    </div>
+    {% include 'footer.html.twig' %}
+</body>
+{% endblock %}
+
+{% block javascript_general %}
+    {% block javascript %}
+
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,19 @@
+<div class="card mb-2" style="width: 100%">
+    <div class="card-header">
+        Filter
+    </div>
+    <div class="card-body">
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+        <form action = "{{ path('character_filter') }}" method = "POST">
+            <div class="row">
+            <div class="col-4">
+                {{ form_widget(form) }}
+            </div>
+        </div>
+        <button class="btn btn-info filteraction" type="submit" ><i class="fa fa-upload"></i>Filter</button>
+        <a class="btn btn-warning filteraction" href="{{ path('character_clearfilter') }}"><i class="fa fa-close"></i> ClearFilter</a>
+            {{ form_rest(form) }}
+        </form>
+    </div>
+</div>
